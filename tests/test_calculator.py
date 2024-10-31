@@ -32,7 +32,10 @@ def test_divide():
 
 
     with pytest.raises(ValueError):
-        calculator.divide(1, 0)
+        calculator.divide(1, .0)
+    with pytest.raises(ValueError):
         calculator.divide(100, 0)
+    with pytest.raises(ValueError):
         calculator.divide(-100, 0)
+    with pytest.raises(ValueError):
         calculator.divide(0, 0)
